@@ -20,7 +20,7 @@ public class Student
 		this.firstName=in.nextLine();
 		System.out.print("Student's Last Name: \t");
 		this.lastName=in.nextLine();
-		System.out.println("1.Freshmen\n 2.Sophomore\n 3.Junior\n 4.Senior");
+		System.out.println(" 1.Freshmen\n 2.Sophomore\n 3.Junior\n 4.Senior");
 		System.out.print("Enter Current Grade Year of study:\t");
 		this.gradeYear=in.nextInt();
 		setID();
@@ -48,10 +48,10 @@ public class Student
 	//Enroll in desired courses
 	public void enroll()
 	{
+		Scanner sc=new Scanner(System.in);
+		courses();
+		System.out.println("Enter desired code to enroll or Enter Q to quit!");
 		do {
-			System.out.println("Enter desired code to enroll or Enter Q to quit!");
-			courses();
-			Scanner sc=new Scanner(System.in);
 			String course=sc.nextLine();
 			if(course.equalsIgnoreCase("Q"))
 			{
